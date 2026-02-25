@@ -6,6 +6,6 @@ use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::resource('photos', PhotoController::class)->only([
-    'index', 'show'
+Route::resource('photos', PhotoController::class)->except([
+    'create', 'store', 'update', 'destroy'
 ]);
