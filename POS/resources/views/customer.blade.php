@@ -1,1 +1,2 @@
-<h1>Halaman Customer</h1>
+<h1>User ID: {{ $id }}</h1>
+<h2>Nama: {{ $name }}</h2>

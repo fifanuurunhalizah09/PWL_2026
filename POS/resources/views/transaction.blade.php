@@ -1,1 +1,1 @@
-<h1>Halaman Transaksi</h1>
+<h1>Halaman Transaksi POS</h1>
