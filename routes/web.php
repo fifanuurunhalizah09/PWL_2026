@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/posts/{post}/comments/{comment}', function ($postID, $commentId){
-    return 'Pos ke-' .$postID." Komentar ke-: ".$commentId;
+Route::get('/articles/{id}', function ($id) {
+    return "Halaman Artikel dengan ID " . $id;
 });
