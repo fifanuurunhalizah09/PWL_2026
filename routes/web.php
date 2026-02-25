@@ -6,6 +6,4 @@ use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/greeting', function () {
-	return view('hello', ['name' => 'Aliza']);
-});
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
