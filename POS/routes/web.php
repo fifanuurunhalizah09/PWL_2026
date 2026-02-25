@@ -2,5 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/product', [ProductController::class, 'index']);
