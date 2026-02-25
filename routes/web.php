@@ -5,4 +5,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
-Route::resource('photos', PhotoController::class);
+
+Route::resource('photos', PhotoController::class)->only([
+    'index', 'show'
+]);
