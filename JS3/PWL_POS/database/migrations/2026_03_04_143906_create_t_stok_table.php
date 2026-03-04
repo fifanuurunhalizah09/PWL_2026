@@ -10,12 +10,17 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('t_stok', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('t_stok', function (Blueprint $table) {
+        $table->id();
+        $table->foreignId('barang_id');
+        $table->foreignId('user_id');
+        $table->foreignId('supplier_id');
+        $table->integer('stok_jumlah');
+        $table->date('stok_tanggal');
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.

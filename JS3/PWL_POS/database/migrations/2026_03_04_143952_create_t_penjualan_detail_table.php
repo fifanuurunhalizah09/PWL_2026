@@ -12,14 +12,29 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('t_penjualan_detail', function (Blueprint $table) {
-            $table->id();
+            $table->id('detail_id');
+
+            $table->unsignedBigInteger('penjualan_id');
+            $table->unsignedBigInteger('kode_barang');
+
+            $table->integer('jumlah');
+            $table->bigInteger('harga');
+
             $table->timestamps();
+
+            // Foreign key
+            $table->foreign('penjualan_id')
+                ->references('penjualan_id')
+                ->on('t_penjualan')
+                ->onDelete('cascade');
+
+            $table->foreign('kode_barang')
+                ->references('kode_barang')
+                ->on('m_barang')
+                ->onDelete('cascade');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('t_penjualan_detail');
