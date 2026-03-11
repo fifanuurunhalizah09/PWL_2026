@@ -12,8 +12,10 @@ class UserController extends Controller
     {
         $user = UserModel::firstOrCreate(
             [
-                'username' => 'manager',
-                'nama' => 'Manager',
+                'username' => 'manager33',
+                'nama' => 'Manager Tiga Tiga',
+                'Password' => Hash::make('12345'),
+                'level_id' => 2
             ],
         );
             
