@@ -10,24 +10,11 @@ class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        $data = [
-            [
-                'name' => 'Administrator',
-                'email' => 'admin@example.com',
-                'password' => Hash::make('12345'),
-            ],
-            [
-                'name' => 'Manager',
-                'email' => 'manager@example.com',
-                'password' => Hash::make('12345'),
-            ],
-            [
-                'name' => 'Staff/Kasir',
-                'email' => 'staff@example.com',
-                'password' => Hash::make('12345'),
-            ],
+         $data = [
+            ['user_id' => 1, 'level_id' => 1, 'username' => 'admin', 'nama' => 'Administrator', 'password' => Hash::make('12345')],
+            ['user_id' => 2, 'level_id' => 2, 'username' => 'manager', 'nama' => 'Manager', 'password' => Hash::make('12345')],
+            ['user_id' => 3, 'level_id' => 3, 'username' => 'staff', 'nama' => 'Staff/Kasir', 'password' => Hash::make('12345')],
         ];
-
-        DB::table('users')->insert($data);
+        DB::table('m_user')->insert($data);
     }
 }
