@@ -18,7 +18,7 @@ class UserController extends Controller
         ];
         UserModel::create($data);
 
-        $user = UserModel::all(); 
+        $user = UserModel::find(1); 
         return view('user', ['data' => $user]);
     }
 }
